@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+$background-color_1: #FFFFFF;
+$primary-color: #A700D0;
+$main-text-color: #6C6C6C;
+$error-color: red;
+
+main {
+	background: url(/assets/imagens/bckgdesktop.png);
+	background-size: cover;
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+	color: $primary-color;
+	margin: 5% 0 0 0;
+}
+
+p {
+	color: $main-text-color;
+	font-weight: 600;
+	margin: 4% 4%;
+}
+
+.header {
+	padding-top: 15px;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+}
+
+.container {
+	padding: 30px;
+	height: 475px;
+	width: 425px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+	background-color: $background-color_1;
+}
+
+label {
+	font-weight: 600;
+	color: $main-text-color;
+	// margin-bottom: 10px;
+}
+
+form {
+	text-align: start;
+}
+
+mat-form-field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	padding-bottom: 2%;
+}
+
+mat-error {
+	font-size: 12px;
+	color: $error-color;
+  }
+
+button{
+	width: 100%;
+}
+
+.link {
+	padding: 40px 40px;
+	color: $primary-color;
+	font-weight: 500;
+}

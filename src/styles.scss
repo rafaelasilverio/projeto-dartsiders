@@ -1,25 +1,112 @@
-
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// Plus imports for other components in your app.
 
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
+@import '@angular/material/theming';
+
 @include mat.core();
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$dartsiders-primary: mat.define-palette(mat.$indigo-palette);
-$dartsiders-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$color-primary: (
+  50 : #f4e0f9,
+  100 : #e5b3f1,
+  200 : #d380e8,
+  300 : #c14dde,
+  400 : #b426d7,
+  500 : #a700d0,
+  600 : #9f00cb,
+  700 : #9600c4,
+  800 : #8c00be,
+  900 : #7c00b3,
+  A100 : #f3dcff,
+  A200 : #e1a9ff,
+  A400 : #ce76ff,
+  A700 : #c55dff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+);
 
-// The warn palette is optional (defaults to red).
-$dartsiders-warn: mat.define-palette(mat.$red-palette);
+$color-accent: (
+  50 : #eff0fe,
+  100 : #d7dbfc,
+  200 : #bdc3fa,
+  300 : #a2aaf8,
+  400 : #8e98f7,
+  500 : #7a86f5,
+  600 : #727ef4,
+  700 : #6773f2,
+  800 : #5d69f0,
+  900 : #4a56ee,
+  A100 : #ffffff,
+  A200 : #ffffff,
+  A400 : #dfe2ff,
+  A700 : #c6caff,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #000000,
+      400 : #000000,
+      500 : #000000,
+      600 : #000000,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #000000,
+      A400 : #000000,
+      A700 : #000000,
+    )
+);
 
-// Create the theme object. A theme consists of configurations for individual
-// theming systems such as "color" or "typography".
+$color-warn: (
+  50 : #e8e8e8,
+  100 : #c6c6c6,
+  200 : #a0a0a0,
+  300 : #797979,
+  400 : #5d5d5d,
+  500 : #404040,
+  600 : #3a3a3a,
+  700 : #323232,
+  800 : #2a2a2a,
+  900 : #1c1c1c,
+  A100 : #f07777,
+  A200 : #eb4949,
+  A400 : #ff0202,
+  A700 : #e70000,
+  contrast: (
+      50 : #000000,
+      100 : #000000,
+      200 : #000000,
+      300 : #ffffff,
+      400 : #ffffff,
+      500 : #ffffff,
+      600 : #ffffff,
+      700 : #ffffff,
+      800 : #ffffff,
+      900 : #ffffff,
+      A100 : #000000,
+      A200 : #ffffff,
+      A400 : #ffffff,
+      A700 : #ffffff,
+    )
+);
+
+$dartsiders-primary: mat.define-palette($color-primary);
+$dartsiders-accent: mat.define-palette($color-accent);
+$dartsiders-warn: mat.define-palette($color-warn);
+
 $dartsiders-theme: mat.define-light-theme((
   color: (
     primary: $dartsiders-primary,
@@ -28,12 +115,16 @@ $dartsiders-theme: mat.define-light-theme((
   )
 ));
 
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include mat.all-component-themes($dartsiders-theme);
-
-/* You can add global styles to this file, and also import other style files */
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.botao__desabilitado {
+  background: #7A7F87;
+  color: #FFFFFF;
+  margin: 0 auto;
+  border: 2px solid #C4C4C4;
+  border-radius: 10px;
+  transition: 0.5s ease;
+}
